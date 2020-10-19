@@ -58,7 +58,7 @@
     var map = new mapboxgl.Map({
       container: 'map', // container id
       style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-      center: [41.6862, 72.5451], // starting position [lng, lat]
+      center: [-72.5451, 41.6862], // starting position [lng, lat]
       pitch: 60, // pitch in degrees
       bearing: 45, // bearing in degrees
       zoom: 11
@@ -84,6 +84,14 @@
             mapboxgl: mapboxgl
         })
       );
+    // Add a geolocation button: https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol
+     map.addControl(
+       new mapboxgl.GeolocateControl({
+           positionOptions: {
+           enableHighAccuracy: true},
+           trackUserLocation: true
+       }));
+    
   </script>
 </body>
 
