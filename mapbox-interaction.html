@@ -67,10 +67,12 @@
         curve: 1,
         });
     // Add a search box: https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder/
-      map.addControl(new MapboxGeocoder({
-      accessToken: mapboxgl.accessToken = 'pk.eyJ1IjoibWVuZ2VyMSIsImEiOiJja2c4MTNrYXcwY3kyMnRyd2o4bmk3MXViIn0.95qsNWKiUizVcqHK1qwr4g',
-      mapboxgl: mapboxgl
-      })
+      map.addControl(
+        new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken = 'pk.eyJ1IjoibWVuZ2VyMSIsImEiOiJja2c4MTNrYXcwY3kyMnRyd2o4bmk3MXViIn0.95qsNWKiUizVcqHK1qwr4g',
+            mapboxgl: mapboxgl
+        })
+      );
   </script>
 </body>
 
