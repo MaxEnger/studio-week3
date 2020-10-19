@@ -52,7 +52,13 @@
       bearing: 45, // bearing in degrees
       zoom: 11
     });
-
+  
+      var popup = new mapboxgl.Popup({ closeOnClick: false })
+            .setLngLat([-122.4700, 37.8011])
+            .setHTML('<b>The Presidio.</b><br/> Explore to find a drinking fountain!')
+            .addTo(map);
+    // Add pan and zoom controls: https://docs.mapbox.com/mapbox-gl-js/api/#map#addcontrol
+      map.addControl(new mapboxgl.NavigationControl());
 
     
   </script>
